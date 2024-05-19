@@ -1,11 +1,13 @@
-import { Welcome } from '../components/Welcome/Welcome';
+import { CardsCarousel } from '@/components/CardsCarousel/CardsCarousel';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import { HeroImageRight } from '@/components/HeroImageRight/HeroImageRight';
 
 export function HomePage() {
   return (
     <>
-      <Welcome />
+      <HeroImageRight />
       <ColorSchemeToggle />
+      <CardsCarousel />
     </>
   );
 }

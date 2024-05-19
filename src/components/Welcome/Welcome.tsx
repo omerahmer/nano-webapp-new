@@ -5,9 +5,9 @@ export function Welcome() {
   return (
     <>
       <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
+        Welcome to the{' '}
+        <Text inherit variant="gradient" component="span" gradient={{ from: 'purple', to: 'blue' }}>
+          Nanotechnology Laboratory
         </Text>
       </Title>
       <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
