@@ -67,7 +67,7 @@ export function HeaderMegaMenu() {
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+            <a href="/" className={classes.link}>
               Home
             </a>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
@@ -91,7 +91,7 @@ export function HeaderMegaMenu() {
                 </SimpleGrid>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
+            <a href="/People" className={classes.link}>
               People
             </a>
             <a href="#" className={classes.link}>
@@ -100,7 +100,14 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group visibleFrom="sm">
-            <Button variant="default">Log in</Button>
+            <Button
+              variant="gradient"
+              component="span"
+              gradient={{ from: 'violet', to: 'blue' }}
+              autoContrast
+            >
+              Log in
+            </Button>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -144,7 +151,7 @@ export function HeaderMegaMenu() {
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <Button variant="default">Log in</Button>
+            <Button color="red">Log in</Button>
             <Button>Sign up</Button>
           </Group>
         </ScrollArea>
