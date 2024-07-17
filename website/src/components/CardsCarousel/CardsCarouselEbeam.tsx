@@ -36,28 +36,28 @@ function Card({ image, title, category }: CardProps) {
 
 const data = [
   {
-    image: 'https://i.ibb.co/KsY1sZw/Functionalization-min.png',
-    title: 'Functionalization of carbon nanotubes',
-    category: 'biosensing',
+    image: 'https://i.ibb.co/vPvxP6B/happymatty.jpg',
+    title: 'Lithography and engineering',
+    category: 'E-beam lithography',
   },
   {
-    image: 'https://i.ibb.co/tzWjqLS/Fabrication-of-biosensing-chips-min.jpg',
-    title: 'Microfluidic device fabrication',
-    category: 'biosensing',
+    image: 'https://i.ibb.co/2vsDDrk/Screenshot-2024-07-07-at-3-48-05-PM.png',
+    title: 'Software',
+    category: 'E-beam lithography',
   },
   {
     image: 'https://i.ibb.co/WKxCrtV/cubething.png',
     title: 'Electronics',
-    category: 'biosensing',
+    category: 'E-beam lithography',
   },
   {
-    image: '',
-    title: '',
-    category: 'biosensing',
+    image: 'https://i.ibb.co/s6wTMzw/biosensing-pic-min.jpg',
+    title: 'Growth of nanotubes',
+    category: 'E-beam lithography',
   },
 ];
 
-export function CardsCarouselBiosensing() {
+export function CardsCarouselEbeam() {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   const slides = data.map((item) => (

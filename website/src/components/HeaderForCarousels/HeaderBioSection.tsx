@@ -1,5 +1,4 @@
 import { Title, Text, Container } from '@mantine/core';
-import React from 'react';
 import classes from './HeaderForCarousels.module.css';
 
 export function HeaderBioSection() {

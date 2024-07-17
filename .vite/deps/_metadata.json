@@ -1,58 +1,8 @@
 {
-  "hash": "d2725a3e",
+  "hash": "aa3b2833",
   "configHash": "55b79e49",
-  "lockfileHash": "86df8d43",
-  "browserHash": "6e254ce0",
-  "optimized": {
-    "react-dom/client": {
-      "src": "../../node_modules/react-dom/client.js",
-      "file": "react-dom_client.js",
-      "fileHash": "142cca57",
-      "needsInterop": true
-    },
-    "@mantine/core": {
-      "src": "../../node_modules/@mantine/core/esm/index.mjs",
-      "file": "@mantine_core.js",
-      "fileHash": "d79765f6",
-      "needsInterop": false
-    },
-    "react-router-dom": {
-      "src": "../../node_modules/react-router-dom/dist/index.js",
-      "file": "react-router-dom.js",
-      "fileHash": "6a68ea71",
-      "needsInterop": false
-    },
-    "@mantinex/mantine-logo": {
-      "src": "../../node_modules/@mantinex/mantine-logo/esm/index.mjs",
-      "file": "@mantinex_mantine-logo.js",
-      "fileHash": "5264621f",
-      "needsInterop": false
-    },
-    "@mantine/hooks": {
-      "src": "../../node_modules/@mantine/hooks/esm/index.mjs",
-      "file": "@mantine_hooks.js",
-      "fileHash": "0832846e",
-      "needsInterop": false
-    },
-    "@tabler/icons-react": {
-      "src": "../../node_modules/@tabler/icons-react/dist/esm/tabler-icons-react.mjs",
-      "file": "@tabler_icons-react.js",
-      "fileHash": "38cb1f55",
-      "needsInterop": false
-    }
-  },
-  "chunks": {
-    "chunk-67NLESBW": {
-      "file": "chunk-67NLESBW.js"
-    },
-    "chunk-5S4H4ZWG": {
-      "file": "chunk-5S4H4ZWG.js"
-    },
-    "chunk-54UUP7EM": {
-      "file": "chunk-54UUP7EM.js"
-    },
-    "chunk-UX42DLI7": {
-      "file": "chunk-UX42DLI7.js"
-    }
-  }
+  "lockfileHash": "e3b0c442",
+  "browserHash": "375adacd",
+  "optimized": {},
+  "chunks": {}
 }

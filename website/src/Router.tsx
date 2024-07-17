@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HomePage } from './pages/Home.page';
 import PeoplePage from './pages/People.page';
+import BiosensingPage from './pages/Biosensing.page';
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
     path: '/People',
     element: <PeoplePage />,
   },
+  {
+    path: '/Biosensing',
+    element: <BiosensingPage />
+  }
 ]);
 
 export function Router() {
