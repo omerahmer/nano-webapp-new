@@ -27,6 +27,7 @@ const PeoplePage: React.FC = () => {
                     throw new Error(`HTTP error! status: ${req.status}`);
                 }
                 const data = await req.json();
+                setPeople(data);
                 console.log(data);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -78,6 +79,10 @@ const PeoplePage: React.FC = () => {
     if (loading) {
         return <p>Loading...</p>;
     }
+
+    console.log("Printing people...");
+    console.log(people);
+    console.log("Printed people");
 
     const principalInvestigator = people.find((person) => person.name === 'Waqas Khalid');
     const otherResearchers = people.filter((person) => person.name !== 'Waqas Khalid');
