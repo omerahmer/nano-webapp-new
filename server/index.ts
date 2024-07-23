@@ -9,7 +9,7 @@ const bcrypt = require('bcrypt');
 const path = require('path');
 const http = require('http');
 
-const dir = "/home/n/na/nanotech/nano-website/server/static";
+const dir = "/home/n/na/nanotech/nano-webapp-new/server/static";
 const sock = process.env.PORT || '/srv/apps/$USER/$USER.sock';
 
 app.use(cors());
