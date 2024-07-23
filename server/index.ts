@@ -499,7 +499,7 @@ app.post('/api/Biosensor', authenticateToken, async (req: AuthenticatedRequest, 
     }
 });
 
-app.get('/api/people', authenticateToken, (req: Request, res: Response) => {
+app.get('/api/people', (req: Request, res: Response) => {
     res.json(people);
 })
 

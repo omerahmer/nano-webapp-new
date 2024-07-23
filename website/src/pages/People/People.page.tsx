@@ -18,25 +18,26 @@ const PeoplePage: React.FC = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const fetchPeople = async () => {
+        const fetchData = async () => {
             try {
-                console.log('Fetching people data...');
-                const response = await fetch("https://nanotech.studentorg.berkeley.edu/api/people");
-                console.log('Response status:', response.status);
-                if (!response.ok) {
-                    throw new Error(`Failed to fetch people data: ${response.statusText}`);
+                setLoading(true);
+
+                const req = await fetch("https://nanotech.studentorg.berkeley.edu/api/people");
+                if (!req.ok) {
+                    throw new Error(`HTTP error! status: ${req.status}`);
                 }
-                const peopleData = await response.json();
-                console.log('People data received:', peopleData);
-                setPeople(peopleData);
-                setLoading(false);
+                const data = await req.json();
+                console.log(data);
             } catch (error) {
                 console.error("Error fetching data:", error);
+            } finally {
                 setLoading(false);
             }
-        }
-        fetchPeople();
-    }, []);
+        };
+        fetchData();
+        return () => {
+        };
+    }, [navigate]);
 
     const handleAddPerson = async (event: React.FormEvent) => {
         event.preventDefault();
