@@ -45,13 +45,6 @@ function Login() {
             <Title ta="center" className={classes.title}>
                 Welcome back!
             </Title>
-            <Text c="dimmed" size="sm" ta="center" mt={5}>
-                Do not have an account yet?{' '}
-                <Anchor size="sm" component="button">
-                    <a href="/Register">Register</a>
-                </Anchor>
-            </Text>
-
 
             <form onSubmit={loginUser}>
                 <Paper withBorder shadow="md" p={30} mt={30} radius="md">

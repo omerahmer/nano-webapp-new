@@ -6,6 +6,7 @@ import EBeamPage from './pages/EBeam.page';
 import Login from './pages/login.page';
 import Biosensor from './pages/Biosensor/Biosensor.page';
 import PeopleForm from './pages/People/PeopleForm.page';
+import FieldEmissionsPage from './pages/FieldEmissions.page';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
     {
         path: '/Biosensor',
         element: <Biosensor />
+    },
+    {
+        path: '/FieldEmissions',
+        element: <FieldEmissionsPage />
     }
 ]);
 

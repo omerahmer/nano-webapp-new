@@ -18,7 +18,7 @@ import {
     useMantineTheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconCoin, IconChevronDown, IconAffiliate, IconAtom, IconDatabase } from '@tabler/icons-react';
+import { IconChevronDown, IconAffiliate, IconAtom, IconDatabase, IconOctagon } from '@tabler/icons-react';
 import classes from './HeaderMegaMenu.module.css';
 
 const mockdata = [
@@ -40,6 +40,12 @@ const mockdata = [
         description: 'Extreme precision lithography with small feature sizes',
         link: '/EBeam'
     },
+    {
+        icon: IconOctagon,
+        title: 'Field Emissions',
+        description: '',
+        link: '/FieldEmissions'
+    }
 ];
 
 export function HeaderMegaMenu() {
@@ -105,14 +111,16 @@ export function HeaderMegaMenu() {
                     </Group>
 
                     <Group visibleFrom="sm">
-                        <Button
-                            variant="gradient"
-                            component="span"
-                            gradient={{ from: 'violet', to: 'blue' }}
-                            autoContrast
-                        >
-                            Log in
-                        </Button>
+                        <a href='/login' style={{ textDecoration: 'none' }}>
+                            <Button
+                                variant="gradient"
+                                component="span"
+                                gradient={{ from: 'violet', to: 'blue' }}
+                                autoContrast
+                            >
+                                Log in
+                            </Button>
+                        </a>
                     </Group>
 
                     <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -156,8 +164,12 @@ export function HeaderMegaMenu() {
                     <Divider my="sm" />
 
                     <Group justify="center" grow pb="xl" px="md">
-                        <Button color="red">Log in</Button>
-                        <Button>Sign up</Button>
+                        <Button
+                            variant='gradient'
+                            gradient={{ from: 'violet', to: 'blue' }}
+                        >
+                            Log in
+                        </Button>
                     </Group>
                 </ScrollArea>
             </Drawer>
