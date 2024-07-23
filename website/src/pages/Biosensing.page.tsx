@@ -1,14 +1,27 @@
-// EBeam.tsx
-
 import React from "react";
+import { Text } from '@mantine/core';
 import { Container } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import ReusableCard from "../components/ReusableCard/ReusableCard";
+import classes from './BiosensingPage.module.css'
 
 interface CardData {
     title: string;
     description: string;
     imageSrc: string;
+}
+
+function GradientText() {
+    return (
+        <span style={{ display: 'inline' }}>
+            <Text
+                className={classes.gradienttext}
+                fw={900}
+                variant="gradient"
+                gradient={{ from: 'blue', to: 'violet', deg: 90 }}
+            >Functionalization, Electrochemical Impedance Spectroscopy, CAD, Microfabrication, and COMSOL</Text>
+        </span>
+    )
 }
 
 const BiosensingPage: React.FC = () => {
@@ -20,52 +33,45 @@ const BiosensingPage: React.FC = () => {
 
     const cardsData: CardData[] = [
         {
-            title: "Overview",
+            title: "Functionalization",
             description:
-                "Our state-of-the-art electron-beam lithography tool empowers researchers and engineers to achieve unprecedented precision in nanoscale fabrication on silicon wafers. By directing electrons through carbon nanotubes, precisely focusing the beam, and exposing a silicon wafer coated with a specialized photoresist, our tool enables the creation of highly customizable patterns and intricate electrical circuits on a nanoscale.",
-            imageSrc: "/ebeam pics/happymatty-min.jpg",
+                "Functionalizing Carbon Nanotubes with secondary amine groups, then quantifying and analyzing functionalized CNTs through fluorescence spectroscopy.",
+            imageSrc: "/biosensing pics/Functionalization-min.png",
         },
         {
-            title: "Electronics",
+            title: "Spectroscopy Testing",
             description:
-                "In the realm of electronics, our focus is on refining and advancing the current sensing system that meticulously tracks the flow of electrons through the intricate pathways of our cutting-edge electron-beam lithography tool.",
-            imageSrc: "/ebeam pics/cubething-min.png",
+                "Conducting Electrochemical impedance spectroscopy tests for determining concentrations of tacrolimus and creatinine to detect kidney failure in patients.",
+            imageSrc: "/biosensing pics/Electrical Impedance Spectroscopy2-min.JPG",
         },
         {
-            title: "Software (Back End)",
+            title: "Fabrication",
             description:
-                "Our team is dedicated to the development of sophisticated software that seamlessly translates nanoscale patterns into a precise sequence of silicon wafer and electron-beam actuations. We are actively working on integrating this software with the picomotor for enhanced wafer movement control.",
-            imageSrc: "/biosensing pics/impedancespectroscopy1-min.png",
+                "Designing and fabricating microfluidic devices through CAD and microfabrication (photolithography, soft-lithography).",
+            imageSrc: "/biosensing pics/Fabrication of biosensing chips-min.JPG",
         },
         {
-            title: "Software (Front End)",
+            title: "Analysis",
             description:
-                "Our mission is to create an intuitive and user-friendly graphical user interface (GUI) where users can effortlessly design intricate patterns. This front-end software will be seamlessly connected to the back-end system for a harmonious user experience.",
-            imageSrc: "/ebeam pics/frontend2-min.png",
-        },
-        {
-            title: "Theoretical Simulation (COMSOL + Theory)",
-            description:
-                "Dive into the world of theoretical simulation as we employ COMSOL to predict the focal length and spot size of the electron beam. Our simulations are meticulously compared with theoretical predictions to ensure the utmost accuracy and reliability.",
-            imageSrc: "https://via.placeholder.com/150",
-        },
-        {
-            title: "Theoretical Simulation (Custom Software)",
-            description:
-                "Embark on a journey of innovation as we develop our own custom software to simulate the end-to-end behavior of our cutting-edge electron-beam lithography system. This software promises to provide insights and understanding like never before.",
-            imageSrc: "/ebeam pics/software-min.png",
+                "Using COMSOL to conduct stress analysis of CNTs to examine the durability and strength, and reliability of our CNT-based biosensing structures.",
+            imageSrc: "/biosensing pics/comsol_test_bio-min.png",
         },
     ];
 
     return (
         <animated.div style={fadeIn}>
             <Container className="mt-5">
-                <h1 className="mb-4">Electron-Beam Lithography Tool</h1>
+                <div className={`${classes.info}`}>
+                    <h1 style={{ fontSize: '2.5em' }}>Biosensing Solutions</h1>
+                    <div style={{ fontSize: '1.45em', fontWeight: 'bold', display: 'inline-block', justifyContent: 'center' }}>
+                        The biosensing team develops cutting-edge technologies for medical diagnostics with our comprehensive understanding of nanomaterials, investigating the potential of Carbon Nanotubes in biosensing applications through various techniques: <GradientText />
+                    </div>
+                </div>
                 {cardsData.map((card, index) => (
                     <ReusableCard key={index} {...card} />
                 ))}
             </Container>
-        </animated.div>
+        </animated.div >
     );
 };
 

@@ -1,8 +1,17 @@
-// ReusableCard.tsx
-
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
-import { animated, useSpring } from 'react-spring';
+import cx from 'clsx';
+import { MantineProvider, Container, Title, Text, Image, createTheme } from '@mantine/core';
+import classes from './ReusableCard.module.css';
+
+const theme = createTheme({
+    components: {
+        Container: Container.extend({
+            classNames: (_, { size }) => ({
+                root: cx({ [classes.responsiveContainer]: size === 'responsive' }),
+            }),
+        }),
+    },
+});
 
 interface ReusableCardProps {
     title: string;
@@ -11,35 +20,22 @@ interface ReusableCardProps {
 }
 
 const ReusableCard: React.FC<ReusableCardProps> = ({ title, description, imageSrc }) => {
-    const [hovered, setHovered] = React.useState(false);
-
-    const popOut = useSpring({
-        transform: `scale(${hovered ? 1.025 : 1})`,
-        boxShadow: `0px 0px ${hovered ? 10 : 5}px rgba(0, 0, 0, ${hovered ? 0.2 : 0.1})`,
-    });
-
     return (
-        <Col>
-            <animated.div
-                style={popOut}
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
-            >
-                <Card className="mb-4">
-                    <Card.Body>
-                        <Card.Title className="card-title">{title}</Card.Title>
-                        <Row>
-                            <Col md={8}>
-                                <Card.Text className="description">{description}</Card.Text>
-                            </Col>
-                            <Col md={4}>
-                                <Card.Img src={imageSrc} alt={`${title} Image`} />
-                            </Col>
-                        </Row>
-                    </Card.Body>
-                </Card>
-            </animated.div>
-        </Col>
+        <MantineProvider theme={theme}>
+            <Container size="responsive" className={classes.customContainer}>
+                <div className={classes.textContainer}>
+                    <Title order={2}>{title}</Title>
+                    <Text className={classes.description}>{description}</Text>
+                </div>
+                <Image
+                    src={imageSrc}
+                    alt={title}
+                    width={400}
+                    height={400}
+                    className={classes.image}
+                />
+            </Container>
+        </MantineProvider>
     );
 };
 

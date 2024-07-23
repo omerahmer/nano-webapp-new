@@ -1,0 +1,36 @@
+.responsiveContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A5167;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+            100%, 0.075),
+        /* shadow ring 👇 */
+        0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+        0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+        0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+    max-width: 60%;
+    /* Adjust the max-width as needed */
+    margin: 20px auto;
+    /* Center the container and add vertical spacing */
+}
+
+.textContainer {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.description {
+    font-size: 1.5rem;
+}

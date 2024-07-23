@@ -2,14 +2,15 @@
   font-size: rem(34px);
   font-weight: 900;
   padding-block: 0%;
-  @media (max-width: $mantine-breakpoint-sm) {
+
+  @media (max-width: 48em) {
     font-size: rem(24px);
   }
 }
 
 .description {
   max-width: rem(600px);
-  margin: auto;
+  margin-left: 22.22%;
 
   &::after {
     content: '';
@@ -40,7 +41,10 @@
 
 .buttonContainer {
   display: flex;
-  justify-content: center; /* Horizontal centering */
-  align-items: center; /* Vertical centering */
+  justify-content: center;
+  /* Horizontal centering */
+  align-items: center;
+  /* Vertical centering */
   margin-top: 2.5%;
+  margin-right: 1.4%;
 }
