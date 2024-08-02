@@ -63,6 +63,7 @@ const PeoplePage: React.FC = () => {
                 setNewPerson({ name: '', image: '', teams: '', blurb: '' });
             } else {
                 const errorData = await response.json();
+                console.log(newPerson);
                 console.error("Failed to add person:", errorData.error);
             }
         } catch (error) {
