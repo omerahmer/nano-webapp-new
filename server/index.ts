@@ -159,7 +159,19 @@ let people: PeopleData[] = [
     blurb:
       "I am a bioengineering student working in the functionalization team, assisting with the quantification and analysis of functionalized CNTs.",
   },
-
+  {
+    name: "Michelle Asadulla",
+    image: `<a href="https://ibb.co/0fV3KzJ"><img src="https://i.ibb.co/fCG79T0/IMG-0259.jpg" alt="IMG-0259" border="0"></a>`,
+    teams: "Biosensing, Media",
+    blurb: "",
+  },
+  {
+    name: "Costas Sarantinos",
+    image: `<a href="https://ibb.co/NF9X86Q"><img src="https://i.ibb.co/nw7THsZ/image1.png" alt="image1" border="0"></a>`,
+    teams: "Biosensing, Software",
+    blurb:
+      "I am a Computer Science student, part of the biosensing and software team. I am working on denoising and analysing the data returned from the functionalized carbon-nanotubes using Machine Learning. In addition I design and set up the database and configure the servers for the exoskeleton project",
+  },
   {
     name: "Emma Horne",
     image:
@@ -196,19 +208,7 @@ let people: PeopleData[] = [
     blurb:
       "I am initiating research on cognitive neuroscience methods and finding a way to integrate them into the current technology with the hopes of tracking relevant biomarkers, brain waves, and other variables. Additionally, performing market analysis on e-beam lithography.",
   },
-  {
-    name: "Michelle Asadulla",
-    image: `<a href="https://ibb.co/0fV3KzJ"><img src="https://i.ibb.co/fCG79T0/IMG-0259.jpg" alt="IMG-0259" border="0"></a>`,
-    teams: "Biosensing, Media",
-    blurb: "",
-  },
-  {
-    name: "Costas Sarantinos",
-    image: `<a href="https://ibb.co/NF9X86Q"><img src="https://i.ibb.co/nw7THsZ/image1.png" alt="image1" border="0"></a>`,
-    teams: "Biosensing, Software",
-    blurb:
-      "I am a Computer Science student, part of the biosensing and software team. I am working on denoising and analysing the data returned from the functionalized carbon-nanotubes using Machine Learning. In addition I design and set up the database and configure the servers for the exoskeleton project",
-  },
+
   {
     name: "Vivian Huang",
     image: "",
