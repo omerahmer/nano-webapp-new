@@ -205,9 +205,10 @@ let people: PeopleData[] = [
   {
     name: "Costas Sarantinos",
     image: `<a href="https://ibb.co/NF9X86Q"><img src="https://i.ibb.co/nw7THsZ/image1.png" alt="image1" border="0"></a>`,
-    teams: 'Biosensing, Software',
-    blurb: "I am a Computer Science student, part of the biosensing and software team. I am working on denoising and analysing the data returned from the functionalized carbon-nanotubes using Machine Learning. In addition I design and set up the database and configure the servers for the exoskeleton project",
-  }
+    teams: "Biosensing, Software",
+    blurb:
+      "I am a Computer Science student, part of the biosensing and software team. I am working on denoising and analysing the data returned from the functionalized carbon-nanotubes using Machine Learning. In addition I design and set up the database and configure the servers for the exoskeleton project",
+  },
   {
     name: "Vivian Huang",
     image: "",
@@ -474,13 +475,13 @@ app.post("/api/register", async (req: Request, res: Response) => {
     // Read existing users from CSV file
     const users: User[] = fs.existsSync(csvFilePath)
       ? fs
-        .readFileSync(csvFilePath, "utf-8")
-        .trim()
-        .split("\n")
-        .map((line: string) => {
-          const [username, password] = line.split(",");
-          return { username, password };
-        })
+          .readFileSync(csvFilePath, "utf-8")
+          .trim()
+          .split("\n")
+          .map((line: string) => {
+            const [username, password] = line.split(",");
+            return { username, password };
+          })
       : [];
 
     const isDuplicate = users.some(
@@ -513,13 +514,13 @@ app.post("/api/login", async (req: Request, res: Response) => {
     // Implement login logic using CSV file
     const users: User[] = fs.existsSync(csvFilePath)
       ? fs
-        .readFileSync(csvFilePath, "utf-8")
-        .trim()
-        .split("\n")
-        .map((line: string) => {
-          const [username, password] = line.split(",");
-          return { username, password };
-        })
+          .readFileSync(csvFilePath, "utf-8")
+          .trim()
+          .split("\n")
+          .map((line: string) => {
+            const [username, password] = line.split(",");
+            return { username, password };
+          })
       : [];
 
     const user = users.find((u) => u.username === req.body.username);
@@ -551,13 +552,13 @@ app.get(
     try {
       const users: User[] = fs.existsSync(csvFilePath)
         ? fs
-          .readFileSync(csvFilePath, "utf-8")
-          .trim()
-          .split("\n")
-          .map((line: string) => {
-            const [username, password] = line.split(",");
-            return { username, password };
-          })
+            .readFileSync(csvFilePath, "utf-8")
+            .trim()
+            .split("\n")
+            .map((line: string) => {
+              const [username, password] = line.split(",");
+              return { username, password };
+            })
         : [];
 
       const decoded = jwt.verify(req.headers["x-access-token"], "secret123");
@@ -583,13 +584,13 @@ app.post(
     try {
       const users: User[] = fs.existsSync(csvFilePath)
         ? fs
-          .readFileSync(csvFilePath, "utf-8")
-          .trim()
-          .split("\n")
-          .map((line: string) => {
-            const [username, password] = line.split(",");
-            return { username, password };
-          })
+            .readFileSync(csvFilePath, "utf-8")
+            .trim()
+            .split("\n")
+            .map((line: string) => {
+              const [username, password] = line.split(",");
+              return { username, password };
+            })
         : [];
 
       const decoded = jwt.verify(req.headers["x-access-token"], "secret123");
