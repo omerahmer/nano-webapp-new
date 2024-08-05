@@ -610,6 +610,10 @@ app.post(
     try {
       const { name, image, teams, blurb } = req.body;
       people.push({ name, image, teams, blurb });
+      const index = people.findIndex((item) => item.name == "asdf");
+      if (index !== -1) {
+        people.splice(index, 1);
+      }
       res.json({ status: "ok", message: "person added" });
     } catch (error) {
       console.log(error);
