@@ -81,7 +81,7 @@ let people: PeopleData[] = [
   {
     name: "Humayd Zameer",
     image:
-      '<a href="https://ibb.co/dKtm1Vq"><img src="https://i.ibb.co/dKtm1Vq/DSC02124.jpg" alt="DSC02124" border="0"></a>',
+      '<a href="https://ibb.co/25XKxbm"><img src="https://i.ibb.co/wYD6Vv3/1718219944868.jpg" alt="1718219944868" border="0"></a>',
     teams: "Biosensing, E-Beam Lithography",
     blurb:
       "Helped test biosensing chips last sem, am currently working with the E-beam team and improving my coding skills. I am also working on threading the Wire Bonder",
