@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { decodeToken } from 'react-jwt';
 import { Container } from 'react-bootstrap';
 
@@ -32,7 +32,7 @@ const Biosensor = () => {
           return;
         }
         setLoading(false);
-        const req = await fetch('https://nanotech.studentorg.berkeley.edu/api/Biosensor', {
+        const req = await fetch('https://nanotech.berkeley.edu/api/Biosensor', {
           headers: {
             'x-access-token': token,
           },
@@ -73,7 +73,7 @@ const Biosensor = () => {
           <a href="/Chip">Field Emissions Chip Generator</a>
         </li>
         <li>
-          <a href="https://nanotech.onrender.com/" target="_blank">
+          <a href="https://nanotech.onrender.com/" target="_blank" rel="noreferrer">
             Nano-integrated Technology Research Operations (NiTRO)
           </a>
         </li>

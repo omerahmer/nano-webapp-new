@@ -19,28 +19,28 @@ const router = createBrowserRouter([
     },
     {
         path: '/PeopleForm',
-        element: <PeopleForm />
+        element: <PeopleForm />,
     },
     {
         path: '/Biosensing',
-        element: <BiosensingPage />
+        element: <BiosensingPage />,
     },
     {
         path: '/EBeam',
-        element: <EBeamPage />
+        element: <EBeamPage />,
     },
     {
         path: '/login',
-        element: <Login />
+        element: <Login />,
     },
     {
         path: '/Biosensor',
-        element: <Biosensor />
+        element: <Biosensor />,
     },
     {
         path: '/FieldEmissions',
-        element: <FieldEmissionsPage />
-    }
+        element: <FieldEmissionsPage />,
+    },
 ]);
 
 export function Router() {

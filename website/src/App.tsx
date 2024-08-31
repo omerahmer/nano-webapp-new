@@ -7,7 +7,7 @@ import { FooterSimple } from './components/FooterSimple/FooterSimple';
 
 export default function App() {
   return (
-    <MantineProvider defaultColorScheme='dark'>
+    <MantineProvider defaultColorScheme="dark">
       <HeaderMegaMenu />
       <Router />
       <FooterSimple />

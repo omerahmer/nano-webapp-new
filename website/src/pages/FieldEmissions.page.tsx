@@ -1,7 +1,5 @@
-const FieldEmissionsPage: React.FC = () => {
-    return (
-        <h1>Page under construction!</h1>
-    )
-}
+const FieldEmissionsPage: React.FC = () => (
+  <h1>Page under construction!</h1>
+);
 
 export default FieldEmissionsPage;

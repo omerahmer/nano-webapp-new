@@ -1,3 +1,4 @@
+/** eslint-disable react/jsx-closing-tag-location */
 import { Title, Paper, TextInput, Container, Button } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -26,7 +27,7 @@ const PeoplePage: React.FC = () => {
       try {
         setLoading(true);
 
-        const req = await fetch('https://nanotech.studentorg.berkeley.edu/api/people');
+        const req = await fetch('https://nanotech.berkeley.edu/api/people');
         if (!req.ok) {
           throw new Error(`HTTP error! status: ${req.status}`);
         }
@@ -40,7 +41,7 @@ const PeoplePage: React.FC = () => {
       }
     };
     fetchData();
-    return () => {};
+    return () => { };
   }, [navigate]);
 
   const handleAddPerson = async (event: React.FormEvent) => {
@@ -51,7 +52,7 @@ const PeoplePage: React.FC = () => {
         navigate('/login');
         return;
       }
-      const response = await fetch('https://nanotech.studentorg.berkeley.edu/api/people', {
+      const response = await fetch('https://nanotech.berkeley.edu/api/people', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -103,6 +104,7 @@ const PeoplePage: React.FC = () => {
                   dangerouslySetInnerHTML={{
                     __html: principalInvestigator.image,
                   }}
+                // eslint-disable-next-line react/jsx-closing-tag-location
                 ></div>
                 <h5 className={classes.text3xl}>{principalInvestigator.name}</h5>
                 <p className={classes.fontItalic}>Principal Investigator</p>
@@ -120,6 +122,7 @@ const PeoplePage: React.FC = () => {
                   <div
                     className={classes.peopleImage}
                     dangerouslySetInnerHTML={{ __html: person.image }}
+                  // eslint-disable-next-line react/jsx-closing-tag-location
                   ></div>
                   <div className={classes.personInfo}>
                     <span className={classes.text3xl}>{person.name}</span>

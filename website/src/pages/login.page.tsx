@@ -10,8 +10,8 @@ import {
     Group,
     Button,
 } from '@mantine/core';
-import classes from './AuthenticationTitle.module.css';
 import { useState, useEffect, FormEvent } from 'react';
+import classes from './AuthenticationTitle.module.css';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -23,7 +23,7 @@ function Login() {
 
     async function loginUser(event: FormEvent) {
         event.preventDefault();
-        const response = await fetch('https://nanotech.studentorg.berkeley.edu/api/login', {
+        const response = await fetch('https://nanotech.berkeley.edu/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,10 +33,10 @@ function Login() {
 
         const data = await response.json();
         if (data.user) {
-            localStorage.setItem('token', data.user)
-            window.location.href = '/Biosensor'
+            localStorage.setItem('token', data.user);
+            window.location.href = '/Biosensor';
         } else {
-            alert('Please check your username and password')
+            alert('Please check your username and password');
         }
         console.log(data);
     }
