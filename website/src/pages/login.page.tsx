@@ -1,83 +1,81 @@
 import {
-    TextInput,
-    PasswordInput,
-    Checkbox,
-    Anchor,
-    Paper,
-    Title,
-    Text,
-    Container,
-    Group,
-    Button,
+  TextInput,
+  PasswordInput,
+  Checkbox,
+  Paper,
+  Title,
+  Container,
+  Group,
+  Button,
 } from '@mantine/core';
 import { useState, useEffect, FormEvent } from 'react';
 import classes from './AuthenticationTitle.module.css';
 
 function Login() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-    useEffect(() => {
-        document.title = 'Login';
-    }, []);
+  useEffect(() => {
+    document.title = 'Login';
+  }, []);
 
-    async function loginUser(event: FormEvent) {
-        event.preventDefault();
-        const response = await fetch('https://nanotech.berkeley.edu/api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ username, password }),
-        });
+  async function loginUser(event: FormEvent) {
+    event.preventDefault();
+    const response = await fetch('https://nanotech.berkeley.edu/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    });
 
-        const data = await response.json();
-        if (data.user) {
-            localStorage.setItem('token', data.user);
-            window.location.href = '/Biosensor';
-        } else {
-            alert('Please check your username and password');
-        }
-        console.log(data);
+    const data = await response.json();
+    if (data.user) {
+      localStorage.setItem('token', data.user);
+      window.location.href = '/Biosensor';
+    } else {
+      alert('Please check your username and password');
     }
-    return (
-        <Container size={420} my={40}>
-            <Title ta="center" className={classes.title}>
-                Welcome back!
-            </Title>
+    console.log(data);
+  }
+  return (
+    <Container size={420} my={40}>
+      <Title ta="center" className={classes.title}>
+        Welcome back!
+      </Title>
 
-            <form onSubmit={loginUser}>
-                <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-                    <TextInput
-                        label="Username"
-                        placeholder="Your username"
-                        required
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                    <PasswordInput
-                        label="Password"
-                        placeholder="Your password"
-                        required
-                        mt="md"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <Group justify="space-between" mt="lg">
-                        <Checkbox label="Remember me" />
-                    </Group>
-                    <Button
-                        fullWidth
-                        mt="xl"
-                        type="submit"
-                        value="login"
-                    >
-                        Sign in
-                    </Button>
-                </Paper>
-            </form>
-        </Container>
-    );
+      <form onSubmit={loginUser}>
+        <Paper withBorder shadow="md" p={30} mt={30} radius="md">
+          <TextInput
+            label="Username"
+            placeholder="Your username"
+            required
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <PasswordInput
+            label="Password"
+            placeholder="Your password"
+            required
+            mt="md"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Group justify="space-between" mt="lg">
+            <Checkbox label="Remember me" />
+          </Group>
+          <Button
+            fullWidth
+            mt="xl"
+            type="submit"
+            value="login"
+          >
+            Sign in
+          </Button>
+        </Paper>
+      </form>
+    </Container>
+  );
 }
 
 export default Login;
