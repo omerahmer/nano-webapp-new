@@ -1,3 +1,4 @@
+/* Base styles */
 .responsiveContainer {
     display: flex;
     justify-content: space-between;
@@ -5,18 +6,13 @@
     background-color: #4A5167;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
-            100%, 0.075),
-        /* shadow ring 👇 */
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
         0 0 0 1px hsla(0, 0%, 0%, 0.05),
-        /* multiple soft shadows 👇 */
         0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
         0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
         0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-    max-width: 60%;
-    /* Adjust the max-width as needed */
+    max-width: 80%;
     margin: 20px auto;
-    /* Center the container and add vertical spacing */
 }
 
 .textContainer {
@@ -33,4 +29,48 @@
 
 .description {
     font-size: 1.5rem;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .responsiveContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .textContainer {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsiveContainer {
+        padding: 14px;
+        max-width: 90%;
+    }
+
+    .textContainer {
+        margin-bottom: 15px;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
 }

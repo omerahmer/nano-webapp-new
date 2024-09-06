@@ -1,8 +1,41 @@
 .info {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .gradienttext {
     font-size: 1.05em;
+}
+
+/* General styles */
+h1 {
+    font-size: 2.5em;
+}
+
+div.heading {
+    font-size: 1.4em;
+    font-weight: bold;
+    display: inline-block;
+    justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    div.heading {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    div.heading {
+        font-size: 1.1em;
+    }
 }

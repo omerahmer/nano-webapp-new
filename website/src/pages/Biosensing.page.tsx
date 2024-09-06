@@ -64,14 +64,15 @@ const BiosensingPage: React.FC = () => {
     <animated.div style={fadeIn}>
       <Container className="mt-5">
         <div className={`${classes.info}`}>
-          <h1 style={{ fontSize: '2.5em' }}>Biosensing Solutions</h1>
-          <div style={{ fontSize: '1.45em', fontWeight: 'bold', display: 'inline-block', justifyContent: 'center' }}>
+          <h1 className={`${classes.headingtitle}`}>Biosensing Solutions</h1>
+          <div className={`${classes.heading}`}>
             The biosensing team develops cutting-edge technologies for medical diagnostics with our comprehensive understanding of nanomaterials, investigating the potential of Carbon Nanotubes in biosensing applications through various techniques: <GradientText />
           </div>
         </div>
         {cardsData.map((card, index) => (
           <ReusableCard key={index} {...card} />
         ))}
+
       </Container>
     </animated.div>
   );
