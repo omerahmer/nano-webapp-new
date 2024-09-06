@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable max-len */
 import React from 'react';
 import { Text } from '@mantine/core';
@@ -67,6 +68,17 @@ const BiosensingPage: React.FC = () => {
           <h1 className={`${classes.headingtitle}`}>Biosensing Solutions</h1>
           <div className={`${classes.heading}`}>
             The biosensing team develops cutting-edge technologies for medical diagnostics with our comprehensive understanding of nanomaterials, investigating the potential of Carbon Nanotubes in biosensing applications through various techniques: <GradientText />
+            <br></br>
+            Check out this presentation of our state-of-the-art biosensing microfluidics cartridge:
+            <div className={`${classes.iframecontainer}`}>
+              <iframe
+                src="https://drive.google.com/file/d/1tl5htONYJSrpQhm1OWCrIo0q14kgIDkg/preview"
+                allow="autoplay"
+                frameBorder="0"
+                allowFullScreen>
+              </iframe>
+            </div>
+
           </div>
         </div>
         {cardsData.map((card, index) => (
