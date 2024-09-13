@@ -6,7 +6,7 @@ import EBeamPage from './pages/EBeam.page';
 import Login from './pages/login.page';
 import Biosensor from './pages/Biosensor/Biosensor.page';
 import PeopleForm from './pages/People/PeopleForm.page';
-import FieldEmissionsPage from './pages/FieldEmissions.page';
+import Exoskeleton from './pages/Exoskeleton.page';
 
 const router = createBrowserRouter([
     {
@@ -38,8 +38,8 @@ const router = createBrowserRouter([
         element: <Biosensor />,
     },
     {
-        path: '/FieldEmissions',
-        element: <FieldEmissionsPage />,
+        path: '/Exoskeleton',
+        element: <Exoskeleton />,
     },
 ]);
 

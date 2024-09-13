@@ -42,9 +42,9 @@ const mockdata = [
   },
   {
     icon: IconOctagon,
-    title: 'Field Emissions',
+    title: 'Exoskeleton',
     description: '',
-    link: '/FieldEmissions',
+    link: '/Exoskeleton',
   },
 ];
 
