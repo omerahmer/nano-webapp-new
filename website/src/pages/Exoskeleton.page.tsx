@@ -19,21 +19,21 @@ const Exoskeleton: React.FC = () => {
 
   const cardsData: CardData[] = [
     {
-      title: 'Overview',
+      title: 'Brainwaves',
       description:
-        'Our state-of-the-art electron-beam lithography tool empowers researchers and engineers to achieve unprecedented precision in nanoscale fabrication on silicon wafers. By directing electrons through carbon nanotubes, precisely focusing the beam, and exposing a silicon wafer coated with a specialized photoresist, our tool enables the creation of highly customizable patterns and intricate electrical circuits on a nanoscale.',
-      imageSrc: '/ebeam pics/happymatty-min.jpg',
+        'Classify the brain signals using AI/ML. Identify which movement the user is taking (such as arm or leg with a certain degree, speed, and force).',
+      imageSrc: '/exoskeleton/eeg.png',
     },
     {
-      title: 'Electronics',
+      title: 'Signal Processing',
       description:
-        'In the realm of electronics, our focus is on refining and advancing the current sensing system that meticulously tracks the flow of electrons through the intricate pathways of our cutting-edge electron-beam lithography tool.',
-      imageSrc: '/ebeam pics/cubething-min.png',
+        'Reading and detecting the brainwaves similar to an EEG. Designing an ultrasonic sensor for nerve detection and stimulation.',
+      imageSrc: '/ebeam pics/IMG_4842-min.jpg',
     },
     {
-      title: 'Software (Back End)',
+      title: 'Motion Aid',
       description:
-        'Our team is dedicated to the development of sophisticated software that seamlessly translates nanoscale patterns into a precise sequence of silicon wafer and electron-beam actuations. We are actively working on integrating this software with the picomotor for enhanced wafer movement control.',
+        'Designing parts for the execution of movement by the brainwaves. Using motors to move limbs and EMS circuits to stimulate the nerves, using thermal pads to aid the muscle movements, etc.',
       imageSrc: '/biosensing pics/impedancespectroscopy1-min.png',
     },
     {
@@ -60,7 +60,7 @@ const Exoskeleton: React.FC = () => {
     <animated.div style={fadeIn}>
       <Container className="mt-5">
         <div className={`${classes.info}`}>
-          <h1 style={{ fontSize: '2.5em' }}>Electron Beam Lithography</h1>
+          <h1 style={{ fontSize: '2.5em' }}>Exoskeleton</h1>
         </div>
         {cardsData.map((card, index) => (
           <ReusableCard key={index} {...card} />
